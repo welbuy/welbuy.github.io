@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>京东宝贝sku,加入购物车链接,关注商品代码,手机端商品链接在线一键生成工具</title>
+<meta name="keywords" content="代码,手机端商品链接在线一键生成工具,京东铺装修,淘宝天猫装修教程,welbuy视频教学" />
+<meta name="description" content="代码,手机端商品链接在线一键生成工具"/>
+<link href="../../images/welbuy.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="header">
+<div class="header_layout">
+<div class="logo"><a href="http://www.welbuy.com/"><img src="images/logo.gif" alt="WELBUY 科技发现" /></a></div>
+<div class="nav"><a href="http://www.welbuy.com/">首页</a> <a href="http://www.welbuy.com/dpzx.html" target="_blank">淘宝天猫装修教程</a> <a href="http://welbuy.com/jd/" target="_blank">京东装修教程</a> <a style="color:#F00" href="http://www.welbuy.com/" target="_blank">VIP视频教程</a> <a href="http://welbuy.com/1688/" target="_blank">阿里巴巴装修教程</a> <a href="/contact.html" target="_blank">联系我们</a></div>
+</div>
+</div>
+
+<div style="width:830px; margin:0 auto">
+<div style="width:830px;" class="link">
+<h2>京东宝贝sku，加入购物车链接，关注商品代码，手机端商品链接在线一键生成工具</h2>
+
+<div class="tishi" id="gugellq" style="display:none;">
+<div>重要提示：生成的代码一定要用谷歌内核浏览器安装或者是用浏览器的极速模式！否则会导致出现白线背景不显示等情况！</div>
+</div>
+
+<script type="text/javascript">
+function Getsku(string,Start,Last){
+	var str = string.split(Start);
+	if(str.length<2){ return; } str = str[1].split(Last); return str[0]; } function set(){ var x=document.getElementsByClassName('item_all'); var y=x[0].getElementsByClassName('item'); var z=y[0].getElementsByTagName('input'); var sku = Getsku(z[0].value,'com\/','\.htm'); var p = 'coll'+sku; var gz = '\<input type=\"button\" value=\"加关注\" class=\"btn-coll\" id=\"' + p +'\" \/>';					
+					var gwc ='http:\/\/gate.jd.com\/InitCart.htmlx?pid='+sku+'&pcount=1&ptype=1';
+					var sjurl='http:\/\/item.m.jd.com\/product\/'+sku+'.html';	
+					if (sku == undefined){
+						alert("生成失败，请检查宝贝链接是否填写正确");
+						document.getElementById('daima').value ="";
+						return false;
+						}
+								//alert(gz);				
+				document.getElementById('daima').value =  '商品sku/商品ID：'+sku+'\n关注商品代码：' +gz+'\n加入购物车代码：'+gwc+'\n手机端商品链接：'+sjurl;				
+				}
+function qingkon(){
+	document.getElementById('daima').value = "";
+	document.getElementById('shanpurl').value = "";
+	}
+</script>
+<style type="text/css">
+.button input {
+    width: 101px;
+    height: 35px;
+    font-size: 15px;
+    font-family: 微软雅黑;
+    letter-spacing: 3px;
+    background: #00A1FF;
+    border: 0;
+    color: #fff;
+	    cursor: pointer;
+}
+.button input#qingchu {
+    width: 101px;
+    height: 35px;
+    font-size: 15px;
+    font-family: 微软雅黑;
+    letter-spacing: 3px;
+    background: #7D7D7D;
+    border: 0;
+    color: #fff;
+	    cursor: pointer;
+}
+.button input#qingchu:hover {
+    background: #525252;
+    color: #fff;
+}
+.button input:hover {
+    background: #FF6A00;
+    color: #fff;
+}
+#zxtool {
+	width: 820px;
+	    font-family: 微软雅黑;    margin: 0 auto;
+	}
+#zxtool h3{
+background: #BFDFFF;
+    padding: 5px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+	}
+.item_all {
+	    width: 820px;
+    list-style: none;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 5px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-start: 0px;
+	}	
+</style>
+<div id="zxtool">
+	<div id="title">
+		<h3>
+			参数设置
+		</h3>
+	</div>
+	<div id="item_total">
+		<ul class="item_all" style="width:820px;list-style:none;">
+			<li id="item_1" class="item" style="color:#F00;">
+				请输入电脑端商品链接: <input type="text" id="shanpurl" autocomplete="off" value="https://item.jd.com/5640520.html" size="40" ondblclick="javascript:this.select();" style="color:#1815FF; line-height:30px; padding:0 5px;">  &nbsp;一键生成sku；加入购物车链接；关注商品代码；手机端商品链接！<br>
+			</li>
+			<ul>
+			</ul>
+		</ul>
+		<div id="button">
+		</div>
+	</div>
+	<div class="button">
+		<input id="shengcheng" type="button" value="生成代码" onclick="set()"> <input id="qingchu" type="button" value="清空代码框" onclick="qingkon()" style="width:136px;"> 
+	</div>
+<br>
+<textarea id="daima" style="width:812px;height:100px;border:1px solid #ddd;color:#0008FF;line-height:21px;" autocomplete="off">此处显示生成后的代码</textarea> <br>
+<br>
+</div>
+</div>
+
+<p style="text-align:left; line-height:200%;"><a style="text-decoration:none; font-size:24px; color:#F00" href="https://m.jd.com/" target="_blank">京东手机链接生成（分类、首页等）&gt;&gt;</a>
+<br />说明：找到自己店铺对应的商品、分类、首页，直接在浏览器地址栏复制链接即可
+</p>
+
+</div>
+
+<div class="footer">
+<div style="height:30px">
+<a href="http://www.welbuy.com/">首页</a> | <a href="http://www.welbuy.com/dpzx.html" target="_blank">淘宝天猫装修教程</a> | <a href="http://welbuy.com/jd/" target="_blank">京东装修教程</a> | <a href="http://v.youku.com/v_show/id_XMTY0MDk4MDIwOA==.html?f=26973577" target="_blank">PS教程</a> | <a href="/contact.html" target="_blank">联系我们</a>
+</div>
+<div><a style="color:#F00" href="http://www.welbuy.com/">淘宝天猫「VIP」教程</a> | <a href="http://www.welbuy.com/dpzx.html" target="_blank">淘宝天猫「特效版」教程</a> | <a style="color:#F00" href="http://welbuy.com/jd/" target="_blank">京东「VIP」教程</a> | <a href="http://welbuy.com/jd/" target="_blank">京东「特效版」教程</a> | <a href="http://welbuy.com/1688/" target="_blank">阿里巴巴装修教程</a> | <a href="http://welbuy.com/c4d/" target="_blank">C4D基础教程</a></div>
+<div style="padding-top:10px">Copyright&copy;2025 科技发现 welbuy.com 版权所有</div>
+</div>
+
+</body>
+</html>
